@@ -1,0 +1,31 @@
+﻿@font-face {
+    font-family: "Avenir Next LT Pro";
+    src: url(../webfonts/AvenirNextLTPro-Bold.eot);
+    src: local("Avenir Next LT Pro Regular"),local("AvenirNextLTPro-Regular"),url(../webfonts/AvenirNextLTPro-Regular.eot?#iefix) format("embedded-opentype"),url(../webfonts/AvenirNextLTPro-Regular.woff2) format("woff2"),url(../webfonts/AvenirNextLTPro-Regular.woff) format("woff"),url(../webfonts/AvenirNextLTPro-Regular.ttf) format("truetype"),url(../webfonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avenir Next LT Pro";
+    src: url(../webfonts/AvenirNextLTPro-Bold.eot);
+    src: local("Avenir Next LT Pro Bold"),local("AvenirNextLTPro-Bold"),url(../webfonts/AvenirNextLTPro-Bold.eot?#iefix) format("embedded-opentype"),url(../webfonts/AvenirNextLTPro-Bold.woff2) format("woff2"),url(../webfonts/AvenirNextLTPro-Bold.woff) format("woff"),url(../webfonts/AvenirNextLTPro-Bold.ttf) format("truetype"),url(../webfonts/AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold) format("svg");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SS BlackTie-Regular";
+    src: url(../webfonts/ss-black-tie-regular.eot);
+    src: url(../webfonts/ss-black-tie-regular.eot?#iefix) format("embedded-opentype"),url(../webfonts/ss-black-tie-regular.woff) format("woff"),url(../webfonts/ss-black-tie-regular.ttf) format("truetype"),url(../webfonts/ss-black-tie-regular.svg#BlackTie-Regular) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SS BlackTie-Bold";
+    src: url(../webfonts/ss-black-tie-bold.eot);
+    src: url(../webfonts/ss-black-tie-bold.eot?#iefix) format("embedded-opentype"),url(../webfonts/ss-black-tie-bold.woff) format("woff"),url(../webfonts/ss-black-tie-bold.ttf) format("truetype"),url(../webfonts/ss-black-tie-bold.svg#BlackTie-Bold) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}

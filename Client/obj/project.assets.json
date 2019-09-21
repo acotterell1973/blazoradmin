@@ -240,6 +240,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.3-beta1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -340,6 +349,21 @@
         },
         "runtime": {
           "bin/placeholder/BlazorAdmin.Shared.dll": {}
+        }
+      },
+      "BlazorAdmin.UI/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.0.0-rc1.19457.4",
+          "Microsoft.AspNetCore.Components.Web": "3.0.0-rc1.19457.4",
+          "Newtonsoft.Json": "12.0.3-beta1"
+        },
+        "compile": {
+          "bin/placeholder/BlazorAdmin.UI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlazorAdmin.UI.dll": {}
         }
       }
     }
@@ -1146,6 +1170,36 @@
         "netstandard.library.nuspec"
       ]
     },
+    "Newtonsoft.Json/12.0.3-beta1": {
+      "sha512": "dvGx3CT9tEs9LbgyIw9MZl+sLCFa6yx1NXLKaldRk+N9BgToJpCK2PUv8z2aNbLq6ljtLS93X5gamWxs8DhdRA==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3-beta1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3-beta1.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
     "System.Buffers/4.5.0": {
       "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
       "type": "package",
@@ -1438,11 +1492,17 @@
       "type": "project",
       "path": "../Shared/BlazorAdmin.Shared.csproj",
       "msbuildProject": "../Shared/BlazorAdmin.Shared.csproj"
+    },
+    "BlazorAdmin.UI/1.0.0": {
+      "type": "project",
+      "path": "../Components/BlazorAdmin.UI/BlazorAdmin.UI.csproj",
+      "msbuildProject": "../Components/BlazorAdmin.UI/BlazorAdmin.UI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "BlazorAdmin.Shared >= 1.0.0",
+      "BlazorAdmin.UI >= 1.0.0",
       "Microsoft.AspNetCore.Blazor >= 3.0.0-preview9.19457.4",
       "Microsoft.AspNetCore.Blazor.Build >= 3.0.0-preview9.19457.4",
       "Microsoft.AspNetCore.Blazor.DevServer >= 3.0.0-preview9.19457.4",
@@ -1483,6 +1543,9 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
+            "C:\\git\\twistedcloudsolutions\\poc\\BlazorAdmin\\Components\\BlazorAdmin.UI\\BlazorAdmin.UI.csproj": {
+              "projectPath": "C:\\git\\twistedcloudsolutions\\poc\\BlazorAdmin\\Components\\BlazorAdmin.UI\\BlazorAdmin.UI.csproj"
+            },
             "C:\\git\\twistedcloudsolutions\\poc\\BlazorAdmin\\Shared\\BlazorAdmin.Shared.csproj": {
               "projectPath": "C:\\git\\twistedcloudsolutions\\poc\\BlazorAdmin\\Shared\\BlazorAdmin.Shared.csproj"
             }

@@ -48,6 +48,16 @@ using BlazorAdmin.Client.Shared;
 
 #line default
 #line hidden
+#line 8 "C:\git\twistedcloudsolutions\poc\BlazorAdmin\Client\_Imports.razor"
+using BlazorAdmin.UI.Components;
+
+#line default
+#line hidden
+#line 9 "C:\git\twistedcloudsolutions\poc\BlazorAdmin\Client\_Imports.razor"
+using BlazorAdmin.UI.Components.Layout;
+
+#line default
+#line hidden
     public class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

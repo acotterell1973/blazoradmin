@@ -33,12 +33,16 @@ const buildHtml = function (cb) {
         .pipe(dest(options.paths.build.base));
 };
 
+const buildfonts = function (cb) {
+    return src(['./libs/webfonts/*.*', options.paths.src.base + '/webfonts/**/*.*'])
+        .pipe(dest(options.paths.build.base + '/webfonts/'));
+};
 
 const developmentStyles = function (cb) {
     var tailwindcss = require('tailwindcss');
     var autoprefixer = require('autoprefixer');
     var postCssImport = require('postcss-import');
-    return src(options.paths.src.css + '/main.css')
+    return src(['./libs/css/all.css', options.paths.src.css + '/main.css'])
         .pipe(postcss(
             [
                 postCssImport,
@@ -46,7 +50,7 @@ const developmentStyles = function (cb) {
                 autoprefixer
             ]
         ))
-        .pipe(concat({ path: 'main.css' }))
+        .pipe(concat({ path: 'admin-style.css' }))
         .pipe(dest(options.paths.dist.css));
 };
 
@@ -90,12 +94,12 @@ const buildImage = function (cb) {
 
 };
 
-exports.default = series(cleanDevelopmentPath, parallel(developmentStyles, developmentScript, developmentImage, developmentHtml), (done) => {
+exports.default = series(cleanDevelopmentPath, parallel(developmentStyles, developmentScript, developmentImage, developmentHtml, buildfonts), (done) => {
     console.log("\n\t" + logSymbols.info, "npm run dev is complete. Files are located at " + options.paths.dist.base + "\n");
     done();
 });
 
-exports.build = series(cleanBuildPath, parallel(buildStyles, buildScript, buildImage, buildHtml), (done) => {
+exports.build = series(cleanBuildPath, parallel(buildStyles, buildScript, buildImage, buildHtml, buildfonts), (done) => {
     console.log("\n\t" + logSymbols.info, "npm run build is complete. Files are located at " + options.paths.dist.base + "\n");
     done();
 });

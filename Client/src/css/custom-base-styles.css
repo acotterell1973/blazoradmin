@@ -1,3 +1,58 @@
-﻿.custom1 {
+﻿body {
+    font-family: theme('fontFamily.body');
+}
 
+    body.no-scroll {
+        overflow: hidden;
+    }
+
+    body.touch.no-scroll {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+
+/* Main Nav Menu Items */
+.products-main-nav .selected {
+    cursor: default;
+}
+
+.products-main-nav-list button {
+    transition: background-color 0.15s ease-in-out;
+}
+
+.products-main-nav .selected .stroke-target {
+    @apply stroke-white;
+}
+
+.products-main-nav .stroke-target {
+    @apply stroke-gray-500;
+    stroke-width: 3px;
+    transition: stroke 0.15s ease-in-out;
+}
+
+.products-main-nav button:hover .stroke-target {
+    @apply stroke-white;
+}
+
+/* Nav Flyout Animation */
+.flyout {
+    height: calc(100vh - theme('elements.headerHeight'));
+    margin-left: theme('elements.navWidth');
+    margin-top: theme('elements.navWidth');
+    transition: transform .2s ease-in-out;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.nav-open .flyout {
+    transform: translate3d(0, 0, 0);
+}
+
+.flyout-overlay {
+    display: none;
+}
+
+.nav-open .flyout-overlay {
+    display: block;
 }
