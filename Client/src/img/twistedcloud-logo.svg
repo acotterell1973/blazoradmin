@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="221" height="73" viewBox="0 0 221 73">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 36px;
+        fill: #fff;
+        text-anchor: middle;
+        font-family: "Avenir Next LT Pro";
+      }
+
+      .cls-2 {
+        font-size: 30px;
+      }
+    </style>
+  </defs>
+  <text id="TwistedCloud_Solutions" data-name="TwistedCloud Solutions" class="cls-1" x="112" y="31"><tspan x="112">TwistedCloud</tspan><tspan class="cls-2" x="112" dy="36">Solutions</tspan></text>
+</svg>

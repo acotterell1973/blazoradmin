@@ -1,7 +1,28 @@
 ﻿@inherits AdminLayoutBase
+<header class="main-header h-56px bg-black text-gray-100 flex items-center flex-shrink-0 text-sm">
+    <div class="flex-grow flex items-center"><a href="/" class="ml-6 inline-block"><img class="h-35px" src="img/twistedcloud-logo.svg" /></a></div>
+    <a href="language" class="flex items-baseline text-gray-100 pr-12"><i class="fas fa-globe-americas mr-2"></i> English <i class="fas fa-chevron-down fa-xs ml-2"></i></a>
+    <a href="user/options" class="flex items-baseline text-gray-100 pr-6"><i class="fas fa-user pr-2"></i> Administrator <i class="fas fa-chevron-down fa-xs ml-2"></i></a>
+</header>
 <div class="app-content h-screen flex">
     <nav class="products-main-nav bg-black text-white w-56px h-full z-40 flex flex-col items-center">
-        <button class="h-56px flex-shrink-0 w-full hover:bg-gray-500 text-gray-500 hover:text-white" ><i class="fas fa-bars"></i></button>
+        <ul class="main-nav-list flex flex-col w-full flex-grow overflow-hidden">
+            <li>
+                <button class="w-full h-90px block flex justify-center items-center hover:bg-gray-500">
+                    <svg class="svg-icon svg-icon-box h-28px" viewBox="0 0 88 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-136.000000, -3377.000000)" stroke-width="3.5" class="stroke-target">
+                                <g transform="translate(136.000000, 3372.000000)">
+                                    <g transform="translate(2.000000, 7.000000)">
+                                        <polygon points="81.0020703 58.7178837 40.5010351 74.2168543 0 58.7178837 0 16.2245423 40.4950031 0.735050702 80.987421 16.2245423 40.4993117 31.7278216 8.4311091 19.4491141 40.5062055 7.17299184 81.0020703 22.6676538"></polygon>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </li>
+            </ul>
     </nav>
 
     <div class="flex-grow flex flex-col z-10">

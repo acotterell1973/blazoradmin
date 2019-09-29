@@ -9,11 +9,18 @@
     <link href="/css/admin-style.css"  type="text/css" rel="stylesheet" />
 </head>
 <body>
-    <app><div class="bg-gray-200 p-4">
-    <span class="block text-gray-700 text-center bg-gray-400 px-4 py-2">1</span>
-    <span class="block text-gray-700 text-center bg-gray-400 px-4 py-2 mt-2">2</span>
-    <span class="block text-gray-700 text-center bg-gray-400 px-4 py-2 mt-2">3</span>
-</div></app>
+    <app>
+        <div class="bg-twistedcloud-gray flex flex-col justify-center items-center w-screen h-screen relative">
+            <img src="images/radial-pl/logo.png" class="w-64">
+            <div class="flex items-center text-white text-xl pt-5">
+                <span>Loading Adminstration Application...</span>
+            </div>
+            <div class="loader loader-absolute-center w-96 h-96">
+                <div class="double-pulse opacity-25"></div>
+                <div class="double-pulse opacity-25"></div>
+            </div>
+        </div>
+    </app>
 
     <script src="_framework/blazor.webassembly.js"></script>
 </body>

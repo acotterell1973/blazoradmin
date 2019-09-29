@@ -6,7 +6,7 @@ module.exports = {
             transparent: 'transparent',
             black: '#000',
             white: '#fff',
-            radial: {
+            twistedcloud: {
                 red: '#ef2637',
                 gray: '#5a5a5f',
                 grey: '#5a5a5f',
