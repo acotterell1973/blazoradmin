@@ -8,5 +8,12 @@ namespace BlazorAdmin.Client.Shared
 {
     public class AdminLayoutBase : LayoutComponentBase
     {
+        [Inject] BlazorAdmin.Shared.AppState AppState { get; set; }
+
+        protected override Task OnInitializedAsync()
+        {
+            AppState.OnChange += StateHasChanged;
+            return base.OnInitializedAsync();
+        }
     }
 }

@@ -58,7 +58,12 @@ using BlazorAdmin.UI.Components.Layout;
 
 #line default
 #line hidden
-    public class App : Microsoft.AspNetCore.Components.ComponentBase
+#line 10 "C:\git\twistedcloudsolutions\poc\BlazorAdmin\Client\_Imports.razor"
+using BlazorAdmin.UI;
+
+#line default
+#line hidden
+    public partial class App : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)

@@ -56,3 +56,116 @@
 .nav-open .flyout-overlay {
     display: block;
 }
+
+
+.box {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+    .box .b {
+        border-radius: 50%;
+        border-left: 4px solid;
+        border-right: 4px solid;
+        border-top: 4px solid transparent !important;
+        border-bottom: 4px solid transparent !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: ro 2s infinite;
+    }
+
+    .box .b1 {
+        width: 520px;
+        height: 520px;
+        border-color: #4a69bd;
+    }
+
+    .box .b2 {
+        width: 500px;
+        height: 500px;
+        border-color: #eb2f06;
+        animation-delay: 0.2s;
+    }
+
+    .box .b3 {
+        width: 480px;
+        height: 480px;
+        border-color: #00b894;
+        animation-delay: 0.4s;
+    }
+
+    .box .b4 {
+        width: 460px;
+        height: 460px;
+        border-color: #6c5ce7;
+        animation-delay: 0.6s;
+    }
+
+@keyframes ro {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(-180deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.loading-text {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: #dfe6e9;
+    font-size:x-large;
+}
+
+.left-panel {
+    width: 300px;
+    transition: width 0.3s;
+}
+
+    .left-panel .left-panel-content {
+        min-width: 300px;
+    }
+
+.collapsible:not(.show) {
+    display: none;
+}
+
+.collapsing {
+    overflow: hidden;
+    transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.collapsed {
+    width: 0;
+}
+
+.right-panel {
+    transition: transform 0.3s;
+    transform: translate3d(100%, 0, 0);
+}
+
+.right-panel-open .right-panel {
+    transform: translate3d(0, 0, 0);
+}
+
+.main-content {
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+.right-panel-open .main-content {
+    opacity: 0.3;
+}

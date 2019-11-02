@@ -1,11 +1,9 @@
 ﻿@inherits AdminLayoutBase
-<header class="main-header h-56px bg-black text-gray-100 flex items-center flex-shrink-0 text-sm">
-    <div class="flex-grow flex items-center"><a href="/" class="ml-6 inline-block"><img class="h-35px" src="img/twistedcloud-logo.svg" /></a></div>
-    <a href="language" class="flex items-baseline text-gray-100 pr-12"><i class="fas fa-globe-americas mr-2"></i> English <i class="fas fa-chevron-down fa-xs ml-2"></i></a>
-    <a href="user/options" class="flex items-baseline text-gray-100 pr-6"><i class="fas fa-user pr-2"></i> Administrator <i class="fas fa-chevron-down fa-xs ml-2"></i></a>
-</header>
-<div class="app-content h-screen flex">
+@inject BlazorAdmin.Shared.AppState AppState
+<div class="flex h-screen @(AppState.IsRightPanelOpen ? "right-panel-open" : null)">
+
     <nav class="products-main-nav bg-black text-white w-56px h-full z-40 flex flex-col items-center">
+        <button class="h-56px"></button>
         <ul class="main-nav-list flex flex-col w-full flex-grow overflow-hidden">
             <li>
                 <button class="w-full h-90px block flex justify-center items-center hover:bg-gray-500">
@@ -22,10 +20,17 @@
                     </svg>
                 </button>
             </li>
-            </ul>
+        </ul>
     </nav>
-
-    <div class="flex-grow flex flex-col z-10">
-        @Body
+    <div class="flex-grow flex flex-col">
+        <header class="main-header h-56px bg-black text-gray-100 flex items-center flex-shrink-0 text-sm">
+            <div class="flex-grow flex items-center"><a href="/" class="inline-block"><span class="text-lg">Twisted Cloud Solutions</span></a></div>
+            <a href="language" class="flex items-baseline text-gray-100 pr-12"><i class="fas fa-globe-americas mr-2"></i> English <i class="fas fa-chevron-down fa-xs ml-2"></i></a>
+            <a href="user/options" class="flex items-baseline text-gray-100 pr-6"><i class="fas fa-user pr-2"></i> Administrator <i class="fas fa-chevron-down fa-xs ml-2"></i></a>
+        </header>
+        <main class="flex-grow flex flex-col overflow-hidden">
+            @Body
+        </main>
     </div>
+
 </div>

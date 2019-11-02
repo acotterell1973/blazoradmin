@@ -1,0 +1,11 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@inherits SelectListBase
+@*https://tympanus.net/codrops/2012/10/04/custom-drop-down-list-styling/*@
+<div class="h-full bg-radial-gray text-sm w-180px wrapper-dropdown-1 @(ToggleDropdown ? "active" : string.Empty )" @onclick="@( (e)=>ToggleDropdown = !ToggleDropdown )">
+    <span>Order Number</span>
+    <ul class="bg-radial-gray dropdown">
+        <li><a href="#"><i class="fas fa-chevron-down fa-xs ml-2"></i>Order SKU</a></li>
+        <li><a href="#"><i class="fas fa-chevron-down fa-xs ml-2"></i>Item</a></li>
+        <li><a href="#"><i class="fas fa-chevron-down fa-xs ml-2"></i>Whatever</a></li>
+    </ul>
+</div>

@@ -1,0 +1,71 @@
+{
+  "name": "blazoradmin",
+  "version": "1.0.0",
+  "description": "A blazor wasm template for building an backend administration app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acotterell1973/blazoradmin.git"
+  },
+  "keywords": [
+    "blazor",
+    "web",
+    "assembly",
+    "c#",
+    "tailwindcss"
+  ],
+  "author": "Andrew Cotterell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acotterell1973/blazoradmin/issues"
+  },
+  "homepage": "https://github.com/acotterell1973/blazoradmin#readme",
+  "options": {
+    "config": {
+      "tailwindjs": "./tailwind.js"
+    },
+    "paths": {
+      "root": "./",
+      "src": {
+        "base": "./src",
+        "css": "./src/css",
+        "js": "./src/js",
+        "img": "./src/img"
+      },
+      "dist": {
+        "base": "./wwwroot/",
+        "css": "./wwwroot/css",
+        "js": "./wwwroot/js",
+        "img": "./wwwroot/img"
+      },
+      "build": {
+        "base": "./wwwroot/",
+        "css": "./wwwroot/css",
+        "js": "./wwwroot/js",
+        "img": "./wwwroot/img"
+      }
+    }
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-purgecss": "^1.2.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "^5.0.1",
+    "gulp-webp": "^4.0.1",
+    "log-symbols": "^3.0.0",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.1.2"
+  }
+}

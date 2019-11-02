@@ -1,43 +1,39 @@
-﻿@inherits ContentViewBase
+﻿@inherits BaseComponent
+<div class="flex flex-grow flex-col">
+    <div class="bg-twistedcloud-gray flex text-white h-65px items-center px-5 flex-shrink-0">
+        <h1 class="text-xl font-bold mr-auto">@ContentTitle</h1>
+        @if (ContentHeaderFragment != null)
+        {
+            @ContentHeaderFragment
+        }
+    </div>
+    <div class="flex flex-grow">
+        <div @ref="LeftPanelContainer" class="left-panel bg-gray-500 text-white collapsible @(AppState.IsLeftPanelOpen ? "show" : "collapsed")">
+            <div class="left-panel-content">
+                @if (ContentLeftFragment != null)
+                {
+                    @ContentLeftFragment
+                }
+            </div>
+        </div>
+        <div class="main-content flex-grow flex flex-col @ContentBodyViewCssClass">
 
-@if (ContentHeader == null)
-{
-	<div class="bg-radial-gray flex text-white h-65px items-center px-5 flex-shrink-0">
-		<h1 class="text-xl font-bold mr-auto">Page Title</h1>
-		<button class="pr-2 text-sm">Order Number <i class="fas fa-chevron-down fa-xs ml-2"></i></button>
-		<div class="relative">
-			<input type="text" placeholder="Search..." class="leading-loose w-64 pl-8 text-radial-gray">
-			<svg aria-hidden="true" class="absolute ml-2 absolute-center-y" width="18" height="18" viewBox="0 0 18 18">
-				<path d="M18 16.5l-5.14-5.18h-.35a7 7 0 1 0-1.19 1.19v.35L16.5 18l1.5-1.5zM12 7A5 5 0 1 1 2 7a5 5 0 0 1 10 0z" class="fill-gray-500"></path>
-			</svg>
-		</div>
-		<button class="btn btn-primary">Search Orders</button>
-	</div>
-}
-else
-{
-	@ContentHeader
-}
-<div class="py-2 bg-radial-red text-white text-center text-sm">This is an error message. ... this can be converted into component,etc</div>
-@if (ContentBody == null)
-{
-	<span>Well, you have to tell me what you want to display here.. I'm not a mind reader... or AM I .... AI</span>
-}
-else
-{
-	@ContentBody
-}
-
-@if (ContentFooter == null)
-{
-	<Actionbar class="flex bg-radial-gray justify-end items-center h-50px flex-shrink-0 text-white px-2">
-		<label class="mr-auto">
-			<input type="checkbox"> 1 Order Selected
-		</label>
-		<button class="btn btn-primary">Primary Action</button>
-	</Actionbar>
-}
-else
-{
-	@ContentFooter
-}
+            @if (ContentBody != null)
+            {
+                @ContentBody
+            }
+        </div>
+    </div>
+    <div class="bg-twistedcloud-gray flex h-65px">
+        @if (ContentFooter != null)
+        {
+            @ContentFooter
+        }
+    </div>
+    <div @ref="RightPanelContainer" class="right-panel absolute right-0 top-0 bottom-0 left-1/2 bg-gray-500">
+        @if (ContentRightFragment != null)
+        {
+            @ContentRightFragment
+        }
+    </div>
+</div>
